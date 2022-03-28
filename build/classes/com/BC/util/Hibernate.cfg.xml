@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE hibernate-configuration PUBLIC  
+        "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+        "http://www.hibernate.org/dtd/hibernate-configuration-5.3.dtd">  
+<hibernate-configuration>
+    <session-factory>
+    	<!-- JDBC Database connection settings -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/bc_db</property>
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">0000</property>
+
+        <property name="connection.pool_size">10</property>
+		<property name="current_session_context_class">thread</property>
+        <property name="show_sql">false</property>
+        <property name="hbm2ddl.auto">update</property>
+        
+        
+        <mapping class="com.BC.beans.Utilisateur"/>
+        <mapping class="com.BC.beans.Client"/>
+        <mapping class="com.BC.beans.Employe"/>
+        <mapping class="com.BC.beans.Equipe"/>
+        <mapping class="com.BC.beans.DG"/>
+        <mapping class="com.BC.beans.RF"/>
+        <mapping class="com.BC.beans.RH"/>
+        <mapping class="com.BC.beans.CE"/>
+        <mapping class="com.BC.beans.Credit"/>
+        <mapping class="com.BC.beans.MatierePremiere"/>
+        <mapping class="com.BC.beans.Projet"/>
+        <mapping class="com.BC.beans.Consomation"/>
+        <mapping class="com.BC.beans.DemandeAchat"/>
+        <mapping class="com.BC.beans.Salaire"/>
+        <mapping class="com.BC.beans.Transaction"/>
+        <mapping class="com.BC.beans.Absence"/>
+        <mapping class="com.BC.beans.Message"/>
+        
+    </session-factory>  
+</hibernate-configuration>  
